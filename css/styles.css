@@ -37,6 +37,10 @@ a {
   cursor: pointer;
 }
 
+p {
+  font-family: "roboto", Arial, Helvetica, sans-serif;
+}
+
 /* NAV BAR */
 
 header {
@@ -413,8 +417,11 @@ footer {
 .info-grid p {
   padding-left: 30px;
   padding-right: 30px;
-  font-family: "spacemono";
   max-width: 300px;
+}
+
+.access-footer {
+  background-image: radial-gradient(rgb(154, 60, 60), rgb(121, 123, 178));
 }
 
 
