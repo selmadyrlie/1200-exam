@@ -18,48 +18,65 @@
 }
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "roboto", Arial, Helvetica, sans-serif;
+}
+
+h1, h2 {
+  font-family: "roboto";
+  font-weight: black;
+  text-transform: uppercase;
+}
+
+a {
+  cursor: pointer;
+}
+
+p {
+  font-family: "roboto", Arial, Helvetica, sans-serif;
+}
 
 /* NAV BAR */
 
 header {
-  top: 0;
-  width: 100%;
-  background: #8fcf78;
-  color: #fff;
+  font-family: "roboto";
+  font-weight: bold;
+  background: #594863;;
+  color: #000000;
+  padding-bottom: 10px;
+  justify-content: space-around;
   align-items: center;
 }
 
-header div {
-  background-color: #8fcf78
-}
-
-.logo {
-  max-width: 90px;
-  padding: 10px 10px 10px;
+.logo img {
+  width: 100px;
 }
 
 .nav-bar {
   list-style-type: none;
-  border: 1px solid #8fcf78;
-  background-color: #8fcf78;
-  margin: 0;
-  padding: 0;
+  font-size: 16px;
+  background-color: #594863;
+  display: flex;
+  
 }
 
 .nav-bar li {
   padding: 9px;
 }
 
-.nav-bar li a {
-  color: #ffff;
+.menu-items li a {
+  color: #000000;
+  text-decoration: none;
+  display: inline-block;
 }
 
-.nav-bar li a:hover {
-  color: #2a92ac;
+.menu-items li a:hover {
+  color: rgb(190, 54, 54);
 }
 
 .nav-bar li:active a {
@@ -67,36 +84,102 @@ header div {
 }
 
 @media screen and (min-width: 600px) {
-  header {
-      display: flex;
-      position: sticky;
+  .nav-bar {
+    display: flex;
+    position: sticky;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .menu-items {
+    flex-direction: column;
   }
 
-  .nav-bar li {
-      display: inline;
+  .menu-items li {
+    display: inline;
   }
 }
+
+/* FOOTER */
+
+footer {
+  clear: right;
+  background-color: #c4d6b0;
+  color: #000000;
+  line-height: 1.5;
+}
+
+footer ul {
+  list-style-type: none;
+}
+
+.footer {
+  padding: 30px 30px 30px 30px;
+}
+
+.footer div {
+  text-align: left;
+}
+
+@media screen and (min-width: 600px) {
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+}
+}
+
 
 /* INDEX PAGE */
 
-.frontpage-intro {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.headline-box {
+  text-align: center;
+  background-image: radial-gradient(rgb(121, 123, 178), rgb(154, 60, 60));
+  padding-top: 60px;
+  padding-bottom: 50px;
 }
 
-.frontpage-intro h1 {
-    flex: 1;
-    font-family: 'roboto';
-    padding-left: 50px;
-    padding-right: 50px;
-    min-width: 30%;
+.headline-box:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
-.frontpage-intro img {
-    max-width: 100%;
+.front-page-image img {
+  width: 100%;
 }
 
+.photo-link a {
+text-decoration: none;
+color: #9A3C3C;
+}
+
+.centered-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-color: #ffffff;
+}
+
+.general-introduction p {
+  text-align: left;
+  padding-bottom: 20px;
+  max-width: 400px;
+}
+
+.general-introduction h2 {
+  background-color: #c4d6b0;
+  color: #000000;
+  padding: 20px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.frontpage-intro-image {
+
+}
 
 .intro-text {
     font-family: 'roboto';
@@ -106,9 +189,7 @@ header div {
     line-height: 25px;
 }
 
-
 /* TOPICAL PAGE */
-
 
 .topical {
   background: rgb(120, 132, 151);
@@ -119,7 +200,6 @@ header div {
   text-align: left;
   background-image: radial-gradient(rgb(121, 123, 178), rgb(154, 60, 60));
 }
-
 
 /* team members */
 
@@ -137,8 +217,8 @@ header div {
   padding: 25px;
 }
 
-
-.topical ul, li {
+.topical ul,
+li {
   padding: 0;
   list-style-type: none;
 }
@@ -147,7 +227,6 @@ header div {
   text-align: center;
   font-size: 40px;
 }
-
 
 .left-side {
   padding: 25px;
@@ -204,7 +283,9 @@ header div {
 }
 
 @media screen and (max-width: 980px) {
-  nav, article, aside {
+  nav,
+  article,
+  aside {
     grid-column: span 3;
   }
   aside {
@@ -216,8 +297,6 @@ header div {
   }
 }
 
-
-
 /* OTHER PAGE */
 
 
@@ -226,9 +305,13 @@ header div {
   font-size: 30px;
 }
 
-.food-selection h3, p {
+.other-intro p {
+  color: rgb(204, 226, 226);
+  font-size: 20px;
+}
+
+.member h3, p {
     color: rgb(204, 226, 226);
-    margin: 20px 10px;
 }
 
 
@@ -236,31 +319,29 @@ header div {
   background-image: radial-gradient(rgb(154, 60, 60), rgb(121, 123, 178));
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 50px;
+  gap: 60px;
+  
   line-height: 1.5em;
-  }
+}
 
-  .other-intro { 
-    grid-column: span 3;
+  .other-intro { grid-column: span 3;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 50px;
+    gap: 60px;
     align-items: center;
     border-bottom: 1px solid rgba(204, 226, 226, .3);
     padding: 10px 10px 60px 10px;
-    color: rgb(204, 226, 226);
-    font-size: 20px;
   }
 
- .cafeteria-pic {
+ .team-pic {
   width: 100%;
   height: auto;
-  border: 2px solid rgba(204, 226, 226, .3);
+  border: 2px solid rgba(204, 226, 226, 0.3);
   box-shadow: rgb(116, 106, 106) 0 0 10px;
   border-radius: 40px;
 }
 
- .food-selection img {
+ .member img {
     border: solid 2px rgba(204, 226, 226, .3);
     width: 300px;
     height: 300px;
@@ -269,30 +350,141 @@ header div {
     box-shadow: rgb(116, 106, 106) 0 0 10px;
 }
 
+section p, h3 {
+  margin: 20px 10px;
+}
 
 /* responsive */
 @media screen and (max-width: 980px) {
-    section {
-      grid-column: span 3;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 60px;
-      align-items: center;
-    }
+  .member {
+    grid-column: span 3;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
   }
+}
+
+@media screen and (max-width: 760px) {
+  section.other-intro {
+    display: block;
+    margin: 0 20px;
+  }
+}
+
+
+
+
+
+  /* EXTRA PAGE */
+
+  .extra {
+    text-align: center;
+    font-size: 17px;
+  }
+
+  .extra.parent {
+    
+    display: flex;
+    flex-flow: column wrap; /* flex-direction, flex wrap */
+    justify-content: center;
+  }
+
+  .div1 {
+    background-image: url(/images/team-rocket-r-1200x900.jpg);
+    background-repeat: repeat;
+    background-size: contain;
+    background-position: center;
+    background-color: cadetblue;
+    margin: 5px;
+    width: 100%;
+    height: 300px;
+  }
+
+  .div1.covertxt {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .div2 {
+    background-color: rgb(204, 226, 226);
+    margin: 5px;
+    width: 100%;
+    height: 250px;
+  }
+
+  .div3 {
+    background-color: cadetblue;
+    background-image: url(/images/wobbuffet.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    margin: 5px;
+    height: 150px;
+    width: 32%;
+  }
+
+  .div4 {
+    background-color: cadetblue;
+    background-image: url(/images/weezing.jpeg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    margin: 5px;
+    width: 32%;
+    height: 150px;
+  }
+
+  .div5 {
+    background-color: cadetblue;
+    background-image: url(/images/pumpkaboo.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    margin: 5px;
+    width: 32%;
+    height: 150px;
+  }
+
+  .div6 {
+    background-color: rgb(204, 226, 226);
+    margin: 5px;
+    height: 200px;
+    width: 100%;
+  }
+
   
-  @media screen and (max-width: 760px) {
-    section, section.other-intro {
-      display: block;
-      margin: 0 20px;
-    }
+  .footer {
+    width: 100%;
+    height: 80px;
+    background-color: #74c370;
   }
 
-/* FOOTER */
+h1,
+h2 {
+  color: rgb(204, 226, 226);
+  align-items: center;
+}
 
-footer {
-  grid-column: span 3;
-  text-align: center;
-  border-top: 1px solid #ddd;
-  padding: 30px;
+.extra img {
+  height: fit-content;
+}
+
+button {
+  background-color:rgb(204, 226, 226);
+  border-radius: 10px;
+  border: none;
+  min-height:30px; 
+  min-width: 120px;
+  color: rgb(80, 81, 140);
+  box-shadow: 0 0 2px 2px rgb(154, 60, 60);
+
+}
+
+button:hover {
+  background-color: rgb(80, 81, 140);
+  color: rgb(204, 226, 226);
 }
