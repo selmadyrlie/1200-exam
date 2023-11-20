@@ -45,25 +45,25 @@ p {
 }
 
 /* NAV BAR */
-
 header {
+  top: 0;
+  width: 100%;
+  background: #c4d6b0;
+  color: #fff;
+  font-size: 15px;
   display: flex;
-  flex-direction: column; /* Arranges child elements in a column */
-  padding: 10px; /* Adds spacing inside the header */
-  background: #c4d6b0; /* Sets background color */
-  font-size: 1.5rem; /* Adjusts font size for readability */
+  flex-direction: column; /* column layout when screen is under 600px */
 }
 
-.logo img {
-  width: 100px;
+.logo {
+ max-width: 100px;
 }
 
 .nav-bar {
   list-style-type: none;
-  font-size: 16px;
-  background-color: #594863;
+  padding: 0;
   display: flex;
-  
+  flex-direction: column;
 }
 
 .nav-bar li {
@@ -82,11 +82,22 @@ header {
 
 @media screen and (min-width: 600px) {
   header {
-    flex-direction: row;
+    flex-direction: row; /* makes the nav bar horizontal when screen is over 600px */
     justify-content: space-between; /* maximizes space between items */
     align-items: center; 
     align-items: flex-end;
   }
+
+  .nav-bar {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .nav-bar li {
+    margin-right: 15px; /* Add some spacing between menu items */
+  }
+
+
   .menu-items { 
     flex-direction: row; /* aligns menu items horizontally when screen is <600px*/
   }
@@ -129,12 +140,13 @@ footer ul {
 /* INDEX PAGE */
 
 .headline-box {
-  text-align: center;
+  text-align: center; /* centers text within the box */
   background-image: radial-gradient(rgb(121, 123, 178), rgb(154, 60, 60));
   padding-top: 60px;
   padding-bottom: 50px;
 }
 
+/* Clearing floats to fix layout */
 .headline-box:after {
   content: "";
   display: table;
@@ -150,6 +162,7 @@ text-decoration: none;
 color: #9A3C3C;
 }
 
+/* styling for centred content*/
 .centered-content {
   display: flex;
   flex-direction: column;
@@ -174,10 +187,6 @@ color: #9A3C3C;
   margin-bottom: 10px;
 }
 
-.frontpage-intro-image {
-
-}
-
 .intro-text {
     font-family: 'roboto';
     max-width: 70%;
@@ -190,101 +199,106 @@ color: #9A3C3C;
 
 /* SUCCES-STORY PAGE */
 
-
+/* Styles for the success story section */
 .success-story {
   display: grid;
-  grid-template-columns: 1fr 3fr 1fr;
-  column-gap: 30px;
+  grid-template-columns: 1fr 3fr 1fr; /* Three columns with specified widths */
+  column-gap: 30px; /* Gap between grid columns */
 }
 
+/* Styles for the top section within the success story */
 .top {
-  grid-column: span 3;
+  grid-column: span 3; /* Spanning three columns */
   text-align: center;
-  border-bottom: 1px solid #ddd;
-  padding: 25px;
-  background-image: radial-gradient(rgb(121, 123, 178), rgb(154, 60, 60));
+  border-bottom: 1px solid #ddd; /* Bottom border */
+  padding: 25px; /* Padding for spacing */
+  background-image: radial-gradient(rgb(121, 123, 178), rgb(154, 60, 60)); /* Background gradient */
 }
 
-
+/* Styles for lists within the success story */
 .success-story ul,
-li {
-  padding: 0;
-  list-style-type: none;
+.success-story li {
+  padding: 0; /* Resetting padding for ul and li elements */
+  list-style-type: none; /* Removing default list styling */
 }
 
+/* Styles for heading 2 within the success story */
 .success-story h2 {
-  font-size: 40px;
+  font-size: 40px; /* Font size for heading 2 */
 }
 
+/* Styles for images within the success story */
 .success-story img {
-  width: 100%;
-  padding: 20px 0;
+  width: 100%; /* Make images responsive within their container */
+  padding: 20px 0; /* Padding above and below images */
 }
 
+/* Styles for articles within the success story */
 .success-story article {
-  padding: 25px;
+  padding: 25px; /* Padding for spacing */
 }
 
+/* Styles for the left side of the success story */
 .left-side {
-  padding: 25px;
-  border-right: 1px solid rgb(204, 226, 226);
-  line-height: 2em;
+  padding: 25px; /* Padding for spacing */
+  border-right: 1px solid rgb(204, 226, 226); /* Right border */
+  line-height: 2em; /* Line height for text */
 }
 
 .left-side p {
-  font-weight: bolder;
+  font-weight: bolder; /* Bold font weight for paragraphs */
 }
 
 .left-side a {
-  text-decoration: underline;
+  text-decoration: underline; /* Underline for links */
 }
 
+/* Styles for the right side of the success story */
 .right-side {
-  border-left: 1px solid rgb(204, 226, 226);
-  padding: 25px;
-  line-height: 2em;
+  border-left: 1px solid rgb(204, 226, 226); /* Left border */
+  padding: 25px; /* Padding for spacing */
+  line-height: 2em; /* Line height for text */
 }
 
 .right-side p {
-  font-weight: bold;
+  font-weight: bold; /* Bold font weight for paragraphs */
 }
 
-
-/* responsive */
+/* Responsive styles for screens up to 1200px */
 @media screen and (max-width: 1200px) {
   nav {
-    grid-column: span 3;
-    border-right: 0;
-    border-bottom: 1px solid #ddd;
+    grid-column: span 3; /* Spanning three columns */
+    border-right: 0; /* Removing right border */
+    border-bottom: 1px solid #ddd; /* Bottom border */
   }
   nav li {
-    display: inline-block;
-    margin-right: 10px;
+    display: inline-block; /* Displaying list items inline */
+    margin-right: 10px; /* Margin between list items */
   }
   article {
-    grid-column: span 2;
+    grid-column: span 2; /* Spanning two columns */
   }
   .right-side {
-    padding: 16px;
+    padding: 16px; /* Adjusted padding for the right side */
   }
 }
 
+/* Responsive styles for screens up to 980px */
 @media screen and (max-width: 980px) {
-  nav,
-  article,
-  aside {
-    grid-column: span 3;
+  nav, article, aside {
+    grid-column: span 3; /* Spanning three columns */
   }
   aside {
-    border-left: 0;
-    border-top: 1px solid #ddd;
+    border-left: 0; /* Removing left border */
+    border-top: 1px solid #ddd; /* Top border */
   }
   article h2 {
-    font-size: 2.5em;
+    font-size: 2.5em; /* Adjusted font size for heading 2 */
   }
 }
 
 
+/* ACCESSIBILITY PAGE */
 
 .headline-visit {
   text-align: center;
@@ -410,14 +424,16 @@ li {
 
 /* CAFETERIA PAGE */
 
+/* Styles for the cafeteria section */
 .cafeteria {
   background-image: radial-gradient(rgb(154, 60, 60), rgb(121, 123, 178));
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 60px;
-  line-height: 1.5em;
+  grid-template-columns: 1fr 1fr 1fr; /* Three columns */
+  gap: 60px; /* Gap between grid items */
+  line-height: 1.5em; /* Line height for text */
 }
 
+/* Styles for the introduction text in the cafeteria section */
 .introtxt h2 {
   color: rgb(204, 226, 226);
   font-size: 30px;
@@ -428,54 +444,58 @@ li {
   font-size: 20px;
 }
 
-  .introtxt { 
-    grid-column: span 3;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    align-items: center;
-    border-bottom: 1px solid rgba(204, 226, 226, .3);
-    padding: 10px 10px 60px 10px;
-  }
+/* Styles for the entire introduction text container */
+.introtxt { 
+  grid-column: span 3; /* Spanning three columns */
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two columns within the container */
+  gap: 60px; /* Gap between grid items */
+  align-items: center; /* Centering items vertically */
+  border-bottom: 1px solid rgba(204, 226, 226, .3); /* Bottom border with transparency */
+  padding: 10px 10px 60px 10px; /* Padding for the container */
+}
 
- .cafeteria-pic {
+/* Styles for the cafeteria picture */
+.cafeteria-pic {
   width: 100%;
   height: auto;
   border: 2px solid rgba(204, 226, 226, 0.3);
-  box-shadow: rgb(116, 106, 106) 0 0 10px;
-  border-radius: 40px;
+  box-shadow: rgb(116, 106, 106) 0 0 10px; /* Shadow effect */
+  border-radius: 40px; /* Rounded corners */
 }
 
- .foods img {
-    border: solid 2px rgba(204, 226, 226, .3);
-    width: 300px;
-    height: 300px;
-    margin: 10px;
-    border-radius: 50%;
-    box-shadow: rgb(116, 106, 106) 0 0 10px;
+/* Styles for food images */
+.foods img {
+  border: solid 2px rgba(204, 226, 226, .3);
+  width: 300px;
+  height: 300px;
+  margin: 10px;
+  border-radius: 50%; /* Circular images */
+  box-shadow: rgb(116, 106, 106) 0 0 10px; /* Shadow effect */
 }
 
+/* Styles for food titles and descriptions */
 .foods h3, .foods p {
   color: rgb(204, 226, 226);
-  margin: 20px 10px;
+  margin: 20px 10px; /* Margin for spacing */
 }
 
-
-/* responsive */
+/* Responsive styles for screens up to 980px */
 @media screen and (max-width: 980px) {
   .foods {
-    grid-column: span 3;
+    grid-column: span 3; /* Spanning three columns */
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    align-items: center;
+    grid-template-columns: 1fr 1fr; /* Two columns on smaller screens */
+    gap: 60px; /* Gap between grid items */
+    align-items: center; /* Centering items vertically */
   }
 }
 
+/* Responsive styles for screens up to 760px */
 @media screen and (max-width: 760px) {
   section.introtxt {
-    display: block;
-    margin: 0 20px;
+    display: block; /* Display as a block on smaller screens */
+    margin: 0 20px; /* Margin for spacing */
   }
 }
 
