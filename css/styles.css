@@ -46,13 +46,11 @@ p {
 
 header {
   display: flex;
-<<<<<<< Updated upstream
   flex-direction: column;
   padding: 10px;
   background: #c4d6b0;
   font-size: 1.5rem;
-=======
->>>>>>> Stashed changes
+
 }
 
 .logo {
@@ -90,14 +88,11 @@ header {
   header {
     flex-direction: row;
     justify-content: space-between;
-<<<<<<< Updated upstream
     align-items: center;
-=======
     align-items: flex-end;
   }
   .menu-items {
     flex-direction: row;
->>>>>>> Stashed changes
   }
 
   .nav-bar {
