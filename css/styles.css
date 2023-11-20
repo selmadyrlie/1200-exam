@@ -17,6 +17,8 @@
   font-weight: 900;
 }
 
+
+
 * {
   box-sizing: border-box; /* Changing box model to 'border-box' for more predictable layouts */
   margin: 0; /* remove default spacing */
