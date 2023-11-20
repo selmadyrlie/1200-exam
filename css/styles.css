@@ -48,18 +48,10 @@ p {
 
 header {
   display: flex;
-  flex-direction: column; /* arranges elements in nav-bar in a column */
-  padding: 10px;
-  background: #c4d6b0;
-  font-size: 1.5rem;
-  
-  font-family: "roboto";
-  font-weight: bold;
-  background: #594863;;
-  color: #000000;
-  padding-bottom: 10px;
-  justify-content: space-around;
-  align-items: center;
+  flex-direction: column; /* Arranges child elements in a column */
+  padding: 10px; /* Adds spacing inside the header */
+  background: #c4d6b0; /* Sets background color */
+  font-size: 1.5rem; /* Adjusts font size for readability */
 }
 
 .logo img {
@@ -165,7 +157,7 @@ color: #9A3C3C;
   align-items: center;
   padding-top: 100px;
   padding-bottom: 100px;
-  background-color: #ffffff;
+  background-color: aliceblue
 }
 
 .general-introduction p {
@@ -196,7 +188,7 @@ color: #9A3C3C;
 
 
 
-/* TOPICAL PAGE */
+/* SUCCES-STORY PAGE */
 
 
 .success-story {
@@ -360,7 +352,7 @@ li {
 
 
 
-/* CAMPUS INFO */
+/* CAMPUS INFO PAGE*/
 
 
 .campus-list-info {
