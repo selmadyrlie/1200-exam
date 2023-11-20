@@ -232,6 +232,16 @@ color: #9A3C3C;
   width: 100%; /* Make images responsive within their container */
   padding: 20px 0; /* Padding above and below images */
 }
+/* Styles for the caption of figures within the success story section */
+.success-story figcaption {
+  padding-bottom: 20px; /* Bottom padding for spacing */
+  color: grey; /* Text color for the caption */
+}
+
+/* Styles for links within the caption of figures */
+.success-story figcaption a {
+  color: #9A3C3C; /* Link color within the caption */
+}
 
 /* Styles for articles within the success story */
 .success-story article {
@@ -444,6 +454,10 @@ color: #9A3C3C;
   font-size: 20px;
 }
 
+.introtxt a {
+  text-decoration: underline;
+}
+
 /* Styles for the entire introduction text container */
 .introtxt { 
   grid-column: span 3; /* Spanning three columns */
@@ -456,6 +470,9 @@ color: #9A3C3C;
 }
 
 /* Styles for the cafeteria picture */
+/* photo borrowed from freepik.com
+https://www.freepik.com/free-photo/female-baker-presenting-various-pastries-transparent-display-cabinet_3682306.htm#from_view=detail_alsolike
+*/
 .cafeteria-pic {
   width: 100%;
   height: auto;
@@ -465,6 +482,11 @@ color: #9A3C3C;
 }
 
 /* Styles for food images */
+/* photos borrowed from freepik.com 
+https://www.freepik.com/free-ai-image/delicious-coffee-beans-cup_59582911.htm#query=coffee&position=15&from_view=search&track=sph&uuid=a37fd16a-e949-40d0-a7af-7632b5306755 
+https://www.freepik.com/free-ai-image/fresh-ciabatta-toasted-delicious-gourmet-sandwich-generated-by-ai_41639170.htm#fromView=search&term=sandwich&page=1&position=9&track=ais_ai_generated&regularType=ai
+https://www.freepik.com/free-ai-image/view-delicious-muffin_65362614.htm#fromView=search&term=pastries&page=1&position=25&track=ais_ai_generated&regularType=ai
+*/
 .foods img {
   border: solid 2px rgba(204, 226, 226, .3);
   width: 300px;
