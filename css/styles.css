@@ -34,6 +34,10 @@ h1, h2 {
   text-transform: uppercase;
 }
 
+h1 {
+  font-size: 30pt;
+}
+
 a {
   cursor: pointer;
   text-decoration: none;
@@ -198,6 +202,7 @@ color: #9A3C3C;
 
 
 /* SUCCES-STORY PAGE */
+/* layout based on grid from Net Ninja https://www.youtube.com/playlist?list=PL4cUxeGkcC9hk02lFb6EkdXF2DYGl4Gg4 */
 
 /* Styles for the success story section */
 .success-story {
@@ -231,6 +236,16 @@ color: #9A3C3C;
 .success-story img {
   width: 100%; /* Make images responsive within their container */
   padding: 20px 0; /* Padding above and below images */
+}
+/* Styles for the caption of figures within the success story section */
+.success-story figcaption {
+  padding-bottom: 20px; /* Bottom padding for spacing */
+  color: grey; /* Text color for the caption */
+}
+
+/* Styles for links within the caption of figures */
+.success-story figcaption a {
+  color: #9A3C3C; /* Link color within the caption */
 }
 
 /* Styles for articles within the success story */
@@ -302,7 +317,7 @@ color: #9A3C3C;
 
 .headline-visit {
   text-align: center;
-  background-image: radial-gradient(rgb(154, 60, 60), rgb(121, 123, 178));
+  background-image: radial-gradient(rgb(121, 123, 178), rgb(154, 60, 60));
   padding-top: 50px;
   padding-bottom: 50px;
 }
@@ -317,10 +332,6 @@ color: #9A3C3C;
   padding-top: 60px;
   width: 100%;
   max-width: 700px;
-}
-
-.headline-visit h1 {
-  font-size: 30px;
 }
 
 .info-grid {
@@ -423,6 +434,7 @@ color: #9A3C3C;
 
 
 /* CAFETERIA PAGE */
+/* layout based on grid from Net Ninja https://www.youtube.com/playlist?list=PL4cUxeGkcC9hk02lFb6EkdXF2DYGl4Gg4 */
 
 /* Styles for the cafeteria section */
 .cafeteria {
@@ -439,9 +451,13 @@ color: #9A3C3C;
   font-size: 30px;
 }
 
-.introtxt p {
+.introtxt p, .introtxt a {
   color: rgb(204, 226, 226);
   font-size: 20px;
+}
+
+.introtxt a {
+  text-decoration: underline;
 }
 
 /* Styles for the entire introduction text container */
@@ -456,6 +472,9 @@ color: #9A3C3C;
 }
 
 /* Styles for the cafeteria picture */
+/* photo borrowed from freepik.com
+https://www.freepik.com/free-photo/female-baker-presenting-various-pastries-transparent-display-cabinet_3682306.htm#from_view=detail_alsolike
+*/
 .cafeteria-pic {
   width: 100%;
   height: auto;
@@ -465,6 +484,11 @@ color: #9A3C3C;
 }
 
 /* Styles for food images */
+/* photos borrowed from freepik.com 
+https://www.freepik.com/free-ai-image/delicious-coffee-beans-cup_59582911.htm#query=coffee&position=15&from_view=search&track=sph&uuid=a37fd16a-e949-40d0-a7af-7632b5306755 
+https://www.freepik.com/free-ai-image/fresh-ciabatta-toasted-delicious-gourmet-sandwich-generated-by-ai_41639170.htm#fromView=search&term=sandwich&page=1&position=9&track=ais_ai_generated&regularType=ai
+https://www.freepik.com/free-ai-image/view-delicious-muffin_65362614.htm#fromView=search&term=pastries&page=1&position=25&track=ais_ai_generated&regularType=ai
+*/
 .foods img {
   border: solid 2px rgba(204, 226, 226, .3);
   width: 300px;
