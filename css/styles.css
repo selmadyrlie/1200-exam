@@ -52,30 +52,36 @@ header {
   padding: 10px;
   background: #c4d6b0;
   font-size: 1.5rem;
-
+  
+  font-family: "roboto";
+  font-weight: bold;
+  background: #594863;;
+  color: #000000;
+  padding-bottom: 10px;
+  justify-content: space-around;
+  align-items: center;
 }
 
-.logo {
-  max-width: 100px;
-  margin-bottom: 10px; /* margin to separate logo and menu on smaller screens */
+.logo img {
+  width: 100px;
 }
 
 .nav-bar {
   list-style-type: none;
-  font-size: 18px;
-  margin: 0;
-  padding: 0;
+  font-size: 16px;
+  background-color: #594863;
   display: flex;
-  flex-direction: column;
+  
 }
 
 .nav-bar li {
   padding: 9px;
 }
 
-.nav-bar li a {
+.menu-items li a {
   color: #000000;
   text-decoration: none;
+  display: inline-block;
 }
 
 .nav-bar li a:hover {
@@ -93,13 +99,8 @@ header {
     flex-direction: row; /* aligns menu items horizontally when screen is <600px*/
   }
 
-  .nav-bar {
-    flex-direction: row;
-    margin: 0;
-  }
-
-  .logo {
-    margin-bottom: 0;
+  .menu-items li {
+    display: inline;
   }
 }
 
@@ -181,8 +182,16 @@ color: #9A3C3C;
   margin-bottom: 10px;
 }
 
-#last-line {
-  padding-bottom: 30px;
+.frontpage-intro-image {
+
+}
+
+.intro-text {
+    font-family: 'roboto';
+    max-width: 70%;
+    padding-top: 40px;
+    font-size: 20px;
+    line-height: 25px;
 }
 
 
@@ -249,7 +258,6 @@ li {
 }
 
 
-
 /* responsive */
 @media screen and (max-width: 1200px) {
   nav {
@@ -285,8 +293,6 @@ li {
 }
 
 
-
-/* ACCESSIBILITY */
 
 .headline-visit {
   text-align: center;
