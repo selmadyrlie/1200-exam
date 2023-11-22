@@ -19,38 +19,58 @@
 
 
 
+/* Global styles for all elements */
+
+/* Box model and spacing reset for all elements */
 * {
   box-sizing: border-box; /* Changing box model to 'border-box' for more predictable layouts */
-  margin: 0; /* remove default spacing */
-  padding: 0; /* reset default inner spacing */
+  margin: 0; /* Remove default spacing */
+  padding: 0; /* Reset default inner spacing */
 }
 
+/* Body styles */
 body {
   font-family: "roboto", Arial, Helvetica, sans-serif;
   background-color: aliceblue;
 }
 
+/* Heading styles */
 h1, h2 {
   font-family: "roboto";
   font-weight: black;
   text-transform: uppercase;
 }
 
+/* Heading 1 styles */
 h1 {
   font-size: 30pt;
 }
 
+/* Anchor (link) styles */
 a {
   cursor: pointer;
   text-decoration: none;
   color: #000000;
 }
 
+/* Paragraph styles */
 p {
   font-family: "roboto", Arial, Helvetica, sans-serif;
 }
 
+/* adjust color on visited links*/
+a:visited {
+  color: #461313;
+}
+
+/* Hover effect on links */
+a:hover {
+  color: #9a3c3c; /* Makes the text red when you hover over it */
+}
+
 /* NAV BAR */
+
+/* Header styles */
 header {
   top: 0;
   width: 100%;
@@ -58,14 +78,16 @@ header {
   color: #fff;
   font-size: 15px;
   display: flex;
-  flex-direction: column; /* column layout when screen is under 600px */
+  flex-direction: column; /* Column layout when the screen is under 600px */
   position: sticky;
 }
 
+/* Logo styles */
 .logo {
- max-width: 100px;
+  max-width: 100px;
 }
 
+/* Navigation bar styles */
 .nav-bar {
   list-style-type: none;
   padding: 0;
@@ -73,42 +95,45 @@ header {
   flex-direction: column;
 }
 
+/* Navigation bar list item styles */
 .nav-bar li {
   padding: 9px;
 }
 
+/* Menu item link styles */
 .menu-items li a {
   color: #000000;
   text-decoration: none;
   display: inline-block;
 }
 
-.nav-bar li a:hover {
-  color: #9a3c3c; /* makes the text red when you hover over it */
-}
-
+/* Media query for screens with a minimum width of 600px */
 @media screen and (min-width: 600px) {
+  /* Adjusting header styles for larger screens */
   header {
-    flex-direction: row; /* makes the nav bar horizontal when screen is over 600px */
-    justify-content: space-between; /* maximizes space between items */
-    align-items: center; 
-    align-items: flex-end;
+    flex-direction: row; /* Makes the nav bar horizontal when the screen is over 600px */
+    justify-content: space-between; /* Maximizes space between items */
+    align-items: center; /* Aligns items vertically */
+    align-items: flex-end; /* Aligns items at the bottom of the header */
   }
 
+  /* Adjusting navigation bar styles for larger screens */
   .nav-bar {
     display: flex;
     flex-direction: row;
   }
 
+  /* Adding spacing between menu items on larger screens */
   .nav-bar li {
-    margin-right: 15px; /* Add some spacing between menu items */
+    margin-right: 15px;
   }
 
-
-  .menu-items { 
-    flex-direction: row; /* aligns menu items horizontally when screen is <600px*/
+  /* Adjusting menu items to be displayed horizontally on larger screens */
+  .menu-items {
+    flex-direction: row;
   }
 
+  /* Displaying menu items inline on larger screens */
   .menu-items li {
     display: inline;
   }
@@ -116,39 +141,45 @@ header {
 
 /* FOOTER */
 
+/* Footer styles */
 footer {
-  clear: right; 
+  clear: right;
   background-color: #c4d6b0;
   color: #000000;
-  line-height: 1.5;
+  line-height: 1.5em;
 }
 
+/* Unordered list styles within the footer */
 footer ul {
   list-style-type: none;
 }
 
+/* Footer container styles */
 .footer {
   padding: 30px 30px 30px 30px;
 }
 
+/* Footer div styles */
 .footer div {
   text-align: left;
 }
 
-@media screen and (min-width: 600px) { 
-
-.footer {
-  display: flex;
-  justify-content: space-between;
-}
+/* Media query for screens with a minimum width of 600px */
+@media screen and (min-width: 600px) {
+  /* Adjusting footer styles for larger screens */
+  .footer {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 
 /* INDEX PAGE */
 
+/* Headline box styles */
 .headline-box {
-  text-align: center; /* centers text within the box */
-  background-image: radial-gradient(rgb(121, 123, 178), rgb(154, 60, 60));
+  text-align: center; /* Centers text within the box */
+  background-image: radial-gradient(rgb(121, 123, 178), rgb(154, 60, 60)); /* Background gradient */
   padding-top: 60px;
   padding-bottom: 50px;
 }
@@ -160,16 +191,18 @@ footer ul {
   clear: both;
 }
 
+/* Front page image styles */
 .front-page-image img {
-  width: 100%;
+  width: 100%; /* Make the image responsive within its container */
 }
 
+/* Photo link styles */
 .photo-link a {
-text-decoration: none;
-color: #9A3C3C;
+  text-decoration: none;
+  color: #9A3C3C;
 }
 
-/* styling for centred content*/
+/* Styling for centered content */
 .centered-content {
   display: flex;
   flex-direction: column;
@@ -177,30 +210,34 @@ color: #9A3C3C;
   align-items: center;
   padding-top: 100px;
   padding-bottom: 100px;
-  background-color: aliceblue
+  background-color: aliceblue; /* Background color */
 }
 
+/* General introduction paragraph styles */
 .general-introduction p {
-  text-align: left;
+  text-align: left; /* Aligns text to the left */
   padding-bottom: 20px;
   max-width: 400px;
 }
 
+/* General introduction heading 2 styles */
 .general-introduction h2 {
-  background-color: #c4d6b0;
-  color: #000000;
-  padding: 20px;
+  background-color: #c4d6b0; /* Background color */
+  color: #000000; /* Text color */
+  padding: 20px; /* Padding for spacing */
   display: inline-block;
   margin-bottom: 10px;
 }
 
+/* Introduction text styles */
 .intro-text {
-    font-family: 'roboto';
-    max-width: 70%;
-    padding-top: 40px;
-    font-size: 20px;
-    line-height: 25px;
+  font-family: 'roboto'; /* Font family */
+  max-width: 70%; /* Maximum width of the container */
+  padding-top: 40px;
+  font-size: 20px;
+  line-height: 25px; /* Line height for text */
 }
+
 
 
 
@@ -215,13 +252,7 @@ color: #9A3C3C;
 }
 
 /* Styles for the top section within the success story */
-.top {
-  grid-column: span 3; /* Spanning three columns */
-  text-align: center;
-  border-bottom: 1px solid #ddd; /* Bottom border */
-  padding: 25px; /* Padding for spacing */
-  background-image: radial-gradient(rgb(121, 123, 178), rgb(154, 60, 60)); /* Background gradient */
-}
+
 
 /* Styles for lists within the success story */
 .success-story ul,
@@ -231,14 +262,14 @@ color: #9A3C3C;
 }
 
 /* Styles for heading 2 within the success story */
-.success-story h2 {
-  font-size: 40px; /* Font size for heading 2 */
+.success-story-headline h2 {
+  font-size: 30px; /* Font size for heading 2 */
 }
 
 /* Styles for images within the success story */
 .success-story img {
   width: 100%; /* Make images responsive within their container */
-  padding: 20px 0; /* Padding above and below images */
+  padding-top: 20px /* Padding above and below images */
 }
 /* Styles for the caption of figures within the success story section */
 .success-story figcaption {
@@ -315,78 +346,77 @@ color: #9A3C3C;
 }
 
 
-/* ACCESSIBILITY PAGE */
+/* ACCESSIBILITY PAGE styles */
 
-.headline-visit {
-  text-align: center;
-  background-image: radial-gradient(rgb(121, 123, 178), rgb(154, 60, 60));
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
-
+/* Styles for accessibility page images */
 .image-accessibility img {
-  width: 100%;
+  width: 100%; /* Make images responsive within their container */
 }
 
+/* Styles for the image accessibility container */
 .image-accessibility {
   display: block;
   margin: 0 auto; /* Center the image */
   padding-top: 60px;
   width: 100%;
-  max-width: 700px;
+  max-width: 700px; /* Set maximum width for the container */
 }
 
+/* Styles for the info grid container */
 .info-grid {
   display: grid;
   margin-left: auto;
   margin-right: auto;
-  gap: 3rem;
+  gap: 3rem; /* Gap between grid items */
   column-gap: 2rem;
   padding-top: 60px;
   padding-bottom: 60px;
   justify-items: center;
   align-items: center;
   justify-content: center;
-  max-width: 650px;
+  max-width: 650px; /* Set maximum width for the container */
 }
 
+/* Styles for info grid items */
 .info-grid div {
   background-color: #c4d6b0;
-  min-height: 450px;
-  max-width: 350px;
-  min-width: 300px;
+  min-height: 500px; /* Minimum height for info grid items */
+  max-width: 350px; /* Maximum width for info grid items */
+  min-width: 300px; /* Minimum width for info grid items */
   padding-top: 20px;
 }
 
+/* Styles for heading 2 within the info grid items */
 .info-grid h2 {
-  padding-left: 30px;
   padding-bottom: 10px;
+  padding-left: 30px;
 }
 
+/* Styles for paragraphs within the info grid items */
 .info-grid p {
   padding-left: 30px;
   padding-right: 30px;
-  max-width: 300px;
+  max-width: 300px; /* Maximum width for paragraphs */
 }
 
+/* Styles for images within the info grid items */
 .info-grid img {
-  object-fit: contain;
-  width: 100%;
+  object-fit: contain; /* Ensure images maintain their aspect ratio */
+  width: 100%; /* Make images responsive within their container */
 }
 
-
+/* Responsive styles for screens with a minimum width of 600px */
 @media screen and (min-width: 600px) {
-.info-grid {
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
+  .info-grid {
+    grid-template-columns: repeat(2, 1fr); /* Two columns on larger screens */
+    gap: 2rem; /* Adjusted gap between grid items */
+  }
 }
-}
 
 
+/* CAMPUS INFO PAGE */
 
-/* CAMPUS INFO PAGE*/
-
-
+/* Styles for the campus list info container */
 .campus-list-info {
   display: grid;
   height: auto;
@@ -395,48 +425,51 @@ color: #9A3C3C;
   padding-bottom: 6rem;
   justify-content: center;
   align-content: center;
-  gap: 4rem;
-  margin-top: 70px;
+  gap: 4rem; /* Gap between grid items */
+  margin-top: 70px; /* Top margin */
 }
 
+/* Styles for campus list info images */
 .campus-list-info img {
   width: 300px;
   height: 300px;
-  width: 100%;
-  object-fit: cover;
+  width: 100%; /* Make images responsive within their container */
+  object-fit: cover; /* Maintain aspect ratio while covering the container */
 }
 
+/* Styles for campus list info heading 2 */
 .campus-list-info h2 {
   margin-top: 1rem;
   margin-bottom: 0.5rem;
-  font-size: 20px;
+  font-size: 20px; /* Font size for heading 2 */
 }
 
-/* CAMPUS INFO media query that respnse to screen size */
+/* Campus info media query that responds to screen size */
 
 @media screen and (max-width: 400px) {
   .campus-list-info {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* Single column layout on small screens */
   }
 }
 
 @media screen and (min-width: 401px) and (max-width: 600px) {
   .campus-list-info {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* Single column layout on medium screens */
   }
 }
 
 @media screen and (min-width: 601px) and (max-width: 800px) {
   .campus-list-info {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr); /* Two columns on larger medium screens */
   }
 }
 
 @media screen and (min-width: 801px) {
   .campus-list-info {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr); /* Three columns on larger screens */
   }
 }
+
 
 
 
@@ -453,18 +486,25 @@ color: #9A3C3C;
 }
 
 /* Styles for the introduction text in the cafeteria section */
-.introtxt h2 {
+.introtxt h1 {
   color: rgb(204, 226, 226);
   font-size: 30px;
+  padding-top: 30px;
 }
 
 .introtxt p, .introtxt a {
   color: rgb(204, 226, 226);
   font-size: 20px;
+  padding-right: 20px;
+  padding-bottom: 10px;
 }
 
 .introtxt a {
   text-decoration: underline;
+}
+
+.introtxt a:hover {
+  color: #000000; /* makes the text red when you hover over it */
 }
 
 /* Styles for the entire introduction text container */
@@ -503,13 +543,19 @@ https://www.freepik.com/free-ai-image/view-delicious-muffin_65362614.htm#fromVie
   margin: 10px;
   border-radius: 50%; /* Circular images */
   box-shadow: rgb(116, 106, 106) 0 0 10px; /* Shadow effect */
+  padding-top: 10px;
 }
 
 /* Styles for food titles and descriptions */
-.foods h3, .foods p {
+.foods h2, .foods p {
   color: rgb(204, 226, 226);
   margin: 20px 10px; /* Margin for spacing */
 }
+
+.foods h2:hover {
+  color: #000000; /* makes the h2/link text black when you hover over it */
+}
+
 
 /* Responsive styles for screens up to 980px */
 @media screen and (max-width: 980px) {
