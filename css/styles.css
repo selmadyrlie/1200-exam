@@ -488,14 +488,15 @@ footer ul {
 
 /* Styles for the introduction text in the cafeteria section */
 .introtxt h1 {
-  color: rgb(255, 255, 255);
+  color: rgb(204, 226, 226);
   font-size: 30px;
   padding-top: 30px;
 }
 
 .introtxt p, .introtxt a {
-  color: rgb(255, 255, 255);
+  color: rgb(204, 226, 226);
   font-size: 20px;
+  padding-right: 20px;
   padding-bottom: 10px;
 }
 
@@ -537,18 +538,16 @@ https://www.freepik.com/free-ai-image/fresh-ciabatta-toasted-delicious-gourmet-s
 https://www.freepik.com/free-ai-image/view-delicious-muffin_65362614.htm#fromView=search&term=pastries&page=1&position=25&track=ais_ai_generated&regularType=ai
 */
 .foods img {
-  border: solid 2px rgba(204, 226, 226, .3);
   width: 300px;
   height: 300px;
   margin: 10px;
   border-radius: 50%; /* Circular images */
-  box-shadow: rgb(116, 106, 106) 0 0 10px; /* Shadow effect */
   padding-top: 10px;
 }
 
 /* Styles for food titles and descriptions */
 .foods h2, .foods p {
-  color: rgb(255, 255, 255);
+  color: rgb(204, 226, 226);
   margin: 20px 10px; /* Margin for spacing */
 }
 
@@ -575,4 +574,3 @@ https://www.freepik.com/free-ai-image/view-delicious-muffin_65362614.htm#fromVie
     margin: 0 20px; /* Margin for spacing */
   }
 }
-
