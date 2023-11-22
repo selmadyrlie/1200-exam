@@ -487,13 +487,13 @@ footer ul {
 
 /* Styles for the introduction text in the cafeteria section */
 .introtxt h1 {
-  color: rgb(204, 226, 226);
+  color: rgb(255, 255, 255);
   font-size: 30px;
   padding-top: 30px;
 }
 
 .introtxt p, .introtxt a {
-  color: rgb(204, 226, 226);
+  color: rgb(255, 255, 255);
   font-size: 20px;
   padding-right: 20px;
   padding-bottom: 10px;
@@ -548,7 +548,7 @@ https://www.freepik.com/free-ai-image/view-delicious-muffin_65362614.htm#fromVie
 
 /* Styles for food titles and descriptions */
 .foods h2, .foods p {
-  color: rgb(204, 226, 226);
+  color: rgb(255, 255, 255);
   margin: 20px 10px; /* Margin for spacing */
 }
 
